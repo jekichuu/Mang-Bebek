@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     //public Rigidbody2D rb;
     public Transform movePoint;
-    //Vector2 movement;
+    public Animator animator;
+    Vector2 movement;
 
     // Update is called once per frame
 
@@ -18,27 +19,38 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        // Input Free Move
-        //movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
+ 
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
         if(Vector3.Distance(transform.position, movePoint.position) <= .05f)
         {
 
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
+            if (Mathf.Abs(movement.x) == 1f)
             {
-                movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                movePoint.position += new Vector3(movement.x, 0f, 0f);
             }
 
-            if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
+            if (Mathf.Abs(movement.y) == 1f)
             {
-                movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                movePoint.position += new Vector3(0f, movement.y, 0f);
             }
 
         }
-        
+
+        if(movement.x > 0)
+        {
+            animator.SetFloat("LastFacedRight", 1);
+        }
+        else if(movement.x < 0)
+        {
+            animator.SetFloat("LastFacedRight", 0);
+        }
+        animator.SetFloat("Speed", movement.magnitude);
+
     }
 
     void FixedUpdate()
