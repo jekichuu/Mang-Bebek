@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     public LayerMask whatStopsMovement;
+    public LayerMask enemies;
 
     // Update is called once per frame
 
@@ -43,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
                 {
                     movePoint.position += new Vector3(0f, movement.y, 0f);
                 }
+                else Debug.Log("Bonk");
+            }
+
+            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, movement.y, 0f), .2f, enemies)){
+                Debug.Log("You hit an enemy");
             }
 
         }
@@ -61,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movement
-        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
 }
