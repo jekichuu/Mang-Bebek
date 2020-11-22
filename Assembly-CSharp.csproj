@@ -609,9 +609,6 @@
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
@@ -662,9 +659,6 @@
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>D:/1mportant Files/Kuliah/Semester 7/Gamedev/mangbebek/Mang Bebek/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
