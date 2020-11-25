@@ -3,10 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OptionMenu : MonoBehaviour
+public class OptionMenu : LevelLoader
 {
+
+    public static bool gameIsPaused = false;
+    public GameObject optionMenuUI;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused) Resume();
+            else Pause();
+        }
+    }
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ReloadLevel();
+    }
+    
+    public void ToMenu()
+    {
+        LoadMainMenu();
+    }
+
+    void Pause()
+    {
+        
+    }
+    
+    void Resume()
+    {
+
     }
 }

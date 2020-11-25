@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : LevelLoader
 {
- 
+    
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LoadLevel1();
     }
 
     public void QuitGame()
@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMain()
     {
-        SceneManager.LoadScene(0);
+        LoadMainMenu();
     }
+
 }
