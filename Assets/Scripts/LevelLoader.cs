@@ -16,7 +16,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel1()
     {
-        StartCoroutine(LoadLevel(1));
+        StartCoroutine(LoadLevel(11));
     }
     public void LoadLevel2()
     {
