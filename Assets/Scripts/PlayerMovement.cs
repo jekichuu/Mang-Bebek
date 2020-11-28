@@ -24,6 +24,8 @@ public class PlayerMovement : LevelLoader
     // Variable to indicate pause or stopped condition
     private bool gameStopped = false;
 
+    public static bool levelCleared = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +85,7 @@ public class PlayerMovement : LevelLoader
             if (Physics2D.OverlapCircle(movePoint.position, .2f, goal))
             {
                 // Stops the game to disable player movement and opens level cleared UI
+                levelCleared = true;
                 gameStopped = true;
                 ClearUI.SetActive(true);
             }

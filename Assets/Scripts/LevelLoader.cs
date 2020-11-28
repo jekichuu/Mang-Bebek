@@ -67,6 +67,8 @@ public class LevelLoader : MonoBehaviour
     // Coroutine to make the game wait for the transition before changing scenes
     IEnumerator LoadLevel(int levelIndex)
     {
+        Time.timeScale = 1f; // Unpauses the game if it's paused
+
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
