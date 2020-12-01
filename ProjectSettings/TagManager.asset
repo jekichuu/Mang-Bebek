@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Boundary
   - turn
+  - rightWall
+  - leftWall
+  - button
   layers:
   - Default
   - TransparentFX
