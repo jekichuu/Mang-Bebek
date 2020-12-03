@@ -294,6 +294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 0
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &166893198
 Rigidbody2D:
   serializedVersion: 4
@@ -439,6 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 0
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &171360240
 Rigidbody2D:
   serializedVersion: 4
@@ -584,6 +588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 0
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &205027373
 Rigidbody2D:
   serializedVersion: 4
@@ -917,6 +923,11 @@ PrefabInstance:
       propertyPath: ClearUI
       value: 
       objectReference: {fileID: 442838329}
+    - target: {fileID: 6379154920576834736, guid: d784572d9f8c8864f97da93e65d16bc0,
+        type: 3}
+      propertyPath: LevelMusic
+      value: 
+      objectReference: {fileID: 2104833520}
     - target: {fileID: 6379154920576834737, guid: d784572d9f8c8864f97da93e65d16bc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1225,6 +1236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 0
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &473754299
 Rigidbody2D:
   serializedVersion: 4
@@ -2841,6 +2854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &1061223504
 Rigidbody2D:
   serializedVersion: 4
@@ -2986,6 +3001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &1186946020
 Rigidbody2D:
   serializedVersion: 4
@@ -3177,6 +3194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!61 &1448145934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3322,6 +3341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!50 &1498946478
 Rigidbody2D:
   serializedVersion: 4
@@ -4240,3 +4261,78 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &2104833519
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.83026344
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26258639
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.416016
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087671, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f966f8aae5e6a9542b01b6b6da0a91af, type: 3}
+--- !u!82 &2104833520 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9162754635635087670, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+    type: 3}
+  m_PrefabInstance: {fileID: 2104833519}
+  m_PrefabAsset: {fileID: 0}

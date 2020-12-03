@@ -7,12 +7,6 @@ public class EnemiesBehaviour2 : MonoBehaviour
     public float speed;
     public bool MoveRight;
 
-    // Start is called before the first frame update
-    /*    void Start()
-        {
-
-        }
-    */
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +23,7 @@ public class EnemiesBehaviour2 : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D trig)
     {
+        // Makes the enemy switch directions instead of teleporting when reaching screen boundaries 
         if (trig.gameObject.CompareTag("rightWall") || trig.gameObject.CompareTag("leftWall"))
         {
 

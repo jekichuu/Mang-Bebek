@@ -352,6 +352,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &105209135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.83026344
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26258639
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.416016
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087669, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162754635635087671, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelMusic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f966f8aae5e6a9542b01b6b6da0a91af, type: 3}
+--- !u!82 &105209136 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9162754635635087670, guid: f966f8aae5e6a9542b01b6b6da0a91af,
+    type: 3}
+  m_PrefabInstance: {fileID: 105209135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &213502937
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!61 &213502940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -886,6 +963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!61 &788298910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1422,6 +1501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!61 &925793317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4025,6 +4106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   MoveRight: 1
+  bossFight: 0
+  isPowered: 0
 --- !u!61 &2117072870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4343,6 +4426,11 @@ PrefabInstance:
       propertyPath: ClearUI
       value: 
       objectReference: {fileID: 1784732421}
+    - target: {fileID: 6379154920576834736, guid: d784572d9f8c8864f97da93e65d16bc0,
+        type: 3}
+      propertyPath: LevelMusic
+      value: 
+      objectReference: {fileID: 105209136}
     - target: {fileID: 6379154920576834737, guid: d784572d9f8c8864f97da93e65d16bc0,
         type: 3}
       propertyPath: m_LocalPosition.x

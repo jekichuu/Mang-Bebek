@@ -9,6 +9,9 @@ public class PlayerMovement : LevelLoader
     public Animator animator;
     public Transform movePoint; // Move point is for referencing where the player will move to (Required for grid movement)
     public GameObject ClearUI;
+    private AudioSource audioSource;
+    public bool isPowered = false;
+    public AudioSource LevelMusic;
 
     // Variable to take chosen skin index from SkinPicker.cs
     public static int Skin;
@@ -34,6 +37,9 @@ public class PlayerMovement : LevelLoader
 
         // Removes movePoint GameObject from being "Player's" child
         movePoint.parent = null;
+
+        // Defines the player gameobject's component audiosource
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -74,7 +80,7 @@ public class PlayerMovement : LevelLoader
             }
 
             // Checks to see if the player will collide with an enemy
-            if (Physics2D.OverlapCircle(movePoint.position, .01f, enemies))
+            if (Physics2D.OverlapCircle(movePoint.position, .01f, enemies) && !isPowered)
             {
                 // Stops the game to disable player movement and reloads the scene
                 gameStopped = true;
@@ -88,6 +94,8 @@ public class PlayerMovement : LevelLoader
                 levelCleared = true;
                 gameStopped = true;
                 ClearUI.SetActive(true);
+                LevelMusic.Stop();
+                audioSource.Play();
             }
         }
 

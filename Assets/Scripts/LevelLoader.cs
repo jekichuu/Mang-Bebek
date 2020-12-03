@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    // Transition is made everytime we change scenes
+    // Transition is made everytime scene changes
     public Animator transition;
     public float transitionTime = 1f;
 
@@ -16,7 +16,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel1()
     {
-        StartCoroutine(LoadLevel(11));
+        StartCoroutine(LoadLevel(12)); // Loads the opening cutscene first
     }
     public void LoadLevel2()
     {
@@ -54,7 +54,10 @@ public class LevelLoader : MonoBehaviour
     {
         StartCoroutine(LoadLevel(10));
     }
-
+    public void LoadEnd()
+    {
+        StartCoroutine(LoadLevel(13));
+    }
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

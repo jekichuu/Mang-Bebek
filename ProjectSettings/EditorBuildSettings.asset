@@ -36,12 +36,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level9.unity
     guid: 3c60fc7bbf5970f49a79babb789e63cc
   - enabled: 1
+    path: Assets/Scenes/BossScene.unity
+    guid: 966f68d44665cd04c9d3167de5e556b0
+  - enabled: 1
     path: Assets/Scenes/Level10.unity
     guid: 6becf92a52310b244b1533f6f76e23fb
   - enabled: 1
     path: Assets/Scenes/OpeningScene.unity
     guid: 314010c127563ed499592b691bfde338
   - enabled: 1
-    path: Assets/Scenes/BossScene.unity
-    guid: 966f68d44665cd04c9d3167de5e556b0
+    path: Assets/Scenes/EndingScene.unity
+    guid: 4b0c4070b133f044d8b7c4d05dd8df9d
   m_configObjects: {}
