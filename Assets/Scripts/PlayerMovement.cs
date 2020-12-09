@@ -29,8 +29,10 @@ public class PlayerMovement : LevelLoader
 
     public static bool levelCleared = false;
 
+    public int currentLevel;
+
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         // Reset gameStopped value for after death
         gameStopped = false;
@@ -40,6 +42,9 @@ public class PlayerMovement : LevelLoader
 
         // Defines the player gameobject's component audiosource
         audioSource = gameObject.GetComponent<AudioSource>();
+
+        // Gets the current level's index to unlock next level after reaching the goal
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -91,6 +96,10 @@ public class PlayerMovement : LevelLoader
             if (Physics2D.OverlapCircle(movePoint.position, .2f, goal))
             {
                 // Stops the game to disable player movement and opens level cleared UI
+                if (PlayerPrefs.GetInt("LevelReached") < currentLevel + 1)
+                {
+                    PlayerPrefs.SetInt("LevelReached", currentLevel + 1);
+                }
                 levelCleared = true;
                 gameStopped = true;
                 ClearUI.SetActive(true);

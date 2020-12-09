@@ -5,56 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public GameObject levelNotReachedSign;
+
     // Transition is made everytime scene changes
     public Animator transition;
     public float transitionTime = 1f;
 
+    public virtual void Start()
+    {
+        PlayerPrefs.GetInt("LevelReached", 1); // Gets highest level reached by player, defaulted to 1 if there is none
+    }
     public void LoadMainMenu()
     {
         StartCoroutine(LoadLevel(0));
     }
 
+    public void LoadCertainLevel(int levelIndex)
+    {   
+        if (PlayerPrefs.GetInt("LevelReached") >= levelIndex) // Checks wether the level to be accessed has been unlocked
+        {
+            StartCoroutine(LoadLevel(levelIndex));
+        }
+        else levelNotReachedSign.SetActive(true); // Activates level not reached notice
+    }
     public void LoadLevel1()
     {
         StartCoroutine(LoadLevel(12)); // Loads the opening cutscene first
     }
-    public void LoadLevel2()
-    {
-        StartCoroutine(LoadLevel(2));
-    }
-    public void LoadLevel3()
-    {
-        StartCoroutine(LoadLevel(3));
-    }
-    public void LoadLevel4()
-    {
-        StartCoroutine(LoadLevel(4));
-    }
-    public void LoadLevel5()
-    {
-        StartCoroutine(LoadLevel(5));
-    }
-    public void LoadLevel6()
-    {
-        StartCoroutine(LoadLevel(6));
-    }
-    public void LoadLevel7()
-    {
-        StartCoroutine(LoadLevel(7));
-    }
-    public void LoadLevel8()
-    {
-        StartCoroutine(LoadLevel(8));
-    }
-    public void LoadLevel9()
-    {
-        StartCoroutine(LoadLevel(9));
-    }
-    public void LoadLevel10()
-    {
-        StartCoroutine(LoadLevel(10));
-    }
-    public void LoadEnd()
+    public void LoadEnd() // Load the ending cutscene
     {
         StartCoroutine(LoadLevel(13));
     }
@@ -72,7 +50,7 @@ public class LevelLoader : MonoBehaviour
     {
         Time.timeScale = 1f; // Unpauses the game if it's paused
 
-        transition.SetTrigger("Start");
+        transition.SetTrigger("Start"); // Triggers the fade to black screen transition
 
         yield return new WaitForSeconds(transitionTime);
 

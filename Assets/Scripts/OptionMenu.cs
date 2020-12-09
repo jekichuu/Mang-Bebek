@@ -21,12 +21,12 @@ public class OptionMenu : LevelLoader
     }
     public void RestartLevel()
     {
-        ReloadLevel();
+        ReloadLevel(); // Method from LevelLoader
     }
     
     public void ToMenu()
     {
-        LoadMainMenu();
+        LoadMainMenu(); // Method from LevelLoader
     }
 
     public void Pause()

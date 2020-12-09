@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : LevelLoader
 {
-
     public void QuitGame()
     {
         Application.Quit();

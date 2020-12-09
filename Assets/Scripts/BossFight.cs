@@ -16,7 +16,7 @@ public class BossFight : MonoBehaviour
     void Start()
     {
         // Calls on the cutscene and changes certain values after 10 seconds of not dying (by standing still)
-        Invoke("ChangeStage", 10f);
+        Invoke("ChangeStage", 20f);
         enemiesBehaviour = enemies.GetComponentInChildren<EnemiesBehaviour>();
         playerMovement = player.GetComponent<PlayerMovement>();
     }
